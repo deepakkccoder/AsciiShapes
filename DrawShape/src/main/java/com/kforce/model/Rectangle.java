@@ -3,13 +3,13 @@ package com.kforce.model;
 public class Rectangle implements IShape {
 
 	@Override
-	public StringBuilder draw(int height) {
-		StringBuilder str = new StringBuilder();
+	public String draw(int height) {
+		String str = new String();
 		for(int i=0; i<height; i++){
 			for(int j=0; j<height*2; j++){
-				str.append("*");
+				str+="*";
 			}
-			str.append("\n");
+			str+="n";
 		}
 		return str;
 

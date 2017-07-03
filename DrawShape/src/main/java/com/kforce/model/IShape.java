@@ -1,6 +1,6 @@
 package com.kforce.model;
 
 public interface IShape {
-	StringBuilder draw(int height);
+	String draw(int height);
 
 }

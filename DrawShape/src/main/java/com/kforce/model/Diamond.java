@@ -1,30 +1,31 @@
 package com.kforce.model;
 
+
 public class Diamond implements IShape {
 
 	@Override
-	public StringBuilder draw(int height) {
+	public String draw(int height) {
 		
-			StringBuilder str = new StringBuilder();
+			String str = new String();
 			int temp = height;
 			for (int i = 1; i <= height; i++) {
 				for (int j = 1; j < temp; j++)
-					str.append(" ");
+					str+=" ";
 
 				temp--;
 				for (int k = 1; k <= 2 * i - 1; k++) {
 					if (k % 2 == 0) {
-						str.append(" ");
+						str+=" ";
 					} else {
-						str.append("*");
+						str+="*";
 					}
 
 				}
 
 				for (int j = 1; j < temp; j++)
-					str.append(" ");
+					str+=" ";
 
-				str.append("\n");
+				str+="n";
 
 			
 
@@ -33,22 +34,22 @@ public class Diamond implements IShape {
 		temp = height-1;
 			for (int i = 0; i <= height; i++) {
 				for (int j = height; j >temp; j--)
-					str.append(" ");
+					str+=" ";
 
 				temp--;
 				for (int k = height; k >= 2 * i - 1; k--) {
 					if (k % 2 == 0) {
-						str.append(" ");
+						str+=" ";
 					} else {
-						str.append("*");
+						str+="*";
 					}
 
 				}
 
 				for (int j = 1; j < temp; j++)
-					str.append(" ");
+					str+=" ";
 
-				str.append("\n");
+				str+="n";
 
 			}
 			return str;
